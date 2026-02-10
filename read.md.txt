@@ -1,0 +1,35 @@
+# 5 Things
+
+A two-player browser game about guessing each other’s preferences.
+
+## How to play
+1. Player A writes 5 things.
+2. Player A guesses Player B’s order.
+3. Player B arranges their real order.
+4. Switch roles.
+5. Final screen shows a split heat comparison.
+
+## Live game
+👉 PASTE YOUR SHORT LINK HERE
+
+## Tech
+- Plain HTML, CSS, JavaScript
+- No backend
+- Hosted on GitHub Pages
+
+## Files
+- index.html → structure & copy
+- style.css → design & animations
+- script.js → game logic
+
+## Current state
+- Fully working
+- Play again button
+- Animated split heat results
+- Shareable link
+
+## Ideas for future upgrades
+- Share results image
+- Save rounds
+- Dark mode
+- Sound / haptics

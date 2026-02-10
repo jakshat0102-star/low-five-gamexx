@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <title>low five</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="gameHeader">
+  <h1>low five</h1>
+  <p class="subtitle">halka phulka masti gamexx</p>
+</header>
+
+
+<div id="inputArea">
+  <div id="howTo" style="max-width: 420px; margin: 0 auto 20px; text-align: left;">
+  <h3>How to play</h3>
+  <ol>
+    <li>Player A writes 5 things.</li>
+    <li>Player A arranges them in the order they think Player B fucks with.</li>
+    <li>Player B arranges the same 5 things in their real order.</li>
+    <li>A score is shown based on matching positions.</li>
+    <li>Roles switch and the game repeats.</li>
+    <li>Final scores are compared.</li>
+  </ol>
+</div>
+
+  <h2>Player A: Write 5 things</h2>
+
+<input class="word" placeholder="Thing 1">
+<input class="word" placeholder="Thing 2">
+<input class="word" placeholder="Thing 3">
+<input class="word" placeholder="Thing 4">
+<input class="word" placeholder="Thing 5">
+
+  <br><br>
+
+  <button onclick="saveWords()">Done</button>
+
+</div>
+
+<div id="gameArea"></div>
+<button id="lockBtn" style="display:none;" onclick="lockGuess()">
+  Lock Guess
+</button>
+
+
+  <h1>low five</h1>
+  <p>halka phulka masti gamexx</p>
+</button>
+
+<script src="script.js"></script>
+</div>
+</body>
+</html>
+

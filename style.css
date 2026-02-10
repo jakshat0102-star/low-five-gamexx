@@ -1,0 +1,331 @@
+/* ---------------- RESET ---------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f4f1ed; /* warm paper */
+  color: #1f2933;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------------- APP WRAPPER ---------------- */
+#app {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ---------------- HEADER ---------------- */
+#gameHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#gameHeader h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+#gameHeader h1 span {
+  display: inline-block;
+  transform: rotate(-1.5deg);
+}
+
+#gameHeader .subtitle {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ---------------- DIVIDER ---------------- */
+.divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 24px 0;
+}
+
+/* ---------------- HOW TO ---------------- */
+#howTo {
+  background: #ffffff;
+  padding: 16px 18px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+#howTo h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#howTo ol {
+  padding-left: 18px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* ---------------- INPUTS ---------------- */
+input.word {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+input.word:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+/* ---------------- BUTTONS ---------------- */
+button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 999px;
+  border: none;
+  background: #2f2f2f;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.1s ease;
+}
+
+button:hover {
+  background: #000000;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* ---------------- CARDS ---------------- */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  cursor: grab;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card.dragging {
+  transform: scale(1.02);
+  opacity: 0.85;
+}
+
+/* ---------------- GAME TEXT ---------------- */
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* ---------------- SCORE TABLE ---------------- */
+table {
+  width: 100%;
+  margin-top: 16px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th {
+  text-align: left;
+  font-weight: 500;
+  color: #6b7280;
+  padding-bottom: 8px;
+}
+
+td {
+  padding: 8px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* ---------------- MOBILE TWEAKS ---------------- */
+@media (max-width: 480px) {
+  body {
+    padding: 16px;
+  }
+
+  #gameHeader h1 {
+    font-size: 28px;
+  }
+}
+/* ---------- HEAT ROW ---------- */
+.heat-row {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  gap: 12px;
+}
+
+.heat-word {
+  flex: 1;
+  font-size: 14px;
+}
+
+.heat-bar {
+  width: 90px;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.heat-fill {
+  height: 100%;
+  background: #111827;
+  border-radius: 999px;
+}
+/* ---------- SPLIT HEAT ROW ---------- */
+.split-heat {
+  margin-top: 16px;
+}
+
+.split-heat-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.split-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.split-word {
+  flex: 1;
+  font-size: 14px;
+}
+
+.split-bars {
+  display: flex;
+  gap: 8px;
+}
+
+.heat-bar {
+  width: 70px;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.heat-fill-a {
+  height: 100%;
+  background: #111827; /* darker */
+}
+
+.heat-fill-b {
+  height: 100%;
+  background: #6b7280; /* lighter */
+}
+
+/* ---------- SPLIT HEAT ROW (FINAL RESULTS) ---------- */
+.split-heat {
+  margin-top: 20px;
+}
+
+.split-heat-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.split-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.split-word {
+  flex: 1;
+  font-size: 14px;
+}
+
+.split-bars {
+  display: flex;
+  gap: 8px;
+}
+
+.heat-bar {
+  width: 70px;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.heat-fill-a {
+  height: 100%;
+  background: #111827;
+  width: 0;
+  transition: width 0.8s ease;
+}
+
+
+.heat-fill-b {
+  height: 100%;
+  background: #6b7280;
+  width: 0;
+  transition: width 0.8s ease;
+}
+
+/* ---------- HEAT BAR ANIMATION (REAL, SAFE) ---------- */
+.heat-fill-a,
+.heat-fill-b {
+  width: 0;
+  transition: width 0.8s ease;
+}
+
+.split-heat .heat-fill-a {
+  width: var(--w);
+}
+
+.split-heat .heat-fill-b {
+  width: var(--w);
+}
+/* ---------- FINAL ACTION BUTTONS ---------- */
+button {
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
